@@ -1,11 +1,10 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
-  allowCypressEnv: false,
-
+export default defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+    specPattern: "cypress/e2e/**/*.cy.js",
+    baseUrl: "https://qauto.forstudy.space/",
   },
 });
+
+
